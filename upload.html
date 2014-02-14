@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+<div id="points">
+<b>To:</b> <span id="to"></span><br>
+<b>From:</b> <span id="from"></span><br>
+<b>Message:</b> <span id="message"></span> </br>
+<input type="file" id="uploadedfile"> <br>
+<button onclick="clicked()">Submit</button>
+</div>
+
+<script>
+
+
+function loadXMLDoc(filename)
+{
+if (window.XMLHttpRequest)
+  {
+  xhttp=new XMLHttpRequest();
+  }
+else // code for IE5 and IE6
+  {
+  xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xhttp.open("GET",filename,false);
+xhttp.send();
+return xhttp.responseXML;
+}
+
+function clicked(){
+var xmlDoc=loadXMLDoc("resources/GPS Coordinates/GPX/Track_02-JUN-13 115502 AM.gpx");
+var x=xmlDoc.getElementsByTagName("trkpt");
+var name = xmlDoc.getElementsByTagName("name");
+//Format the output
+
+document.write("{\"type\":\"Feature\",\"id\":\"1\",\"properties\":{\"name\":\"");
+document.write(name[0].childNodes[0].nodeValue);
+document.write("\",\"density\":1082},\"geometry\":{\"type\":\"Polygon\",\"coordinates\":");
+
+document.write("[[");
+for (i=0;i<x.length;i++)
+  {
+    if(i!=x.length-1){
+  document.write("[");
+  document.write(x[i].getAttribute('lon'));
+  document.write(",");
+  document.write(x[i].getAttribute('lat'));
+  document.write("],"); 
+    }
+    else
+    {
+     document.write("[");
+  document.write(x[i].getAttribute('lon'));
+  document.write(",");
+  document.write(x[i].getAttribute('lat'));
+  document.write("]");  
+    }
+  }
+  document.write("]]}}");
+
+}
+
+
+
+/*
+
+//create a connection to a file
+
+function clicked(){
+
+var connection  = new XMLHttpRequest();
+
+connection.open("GET","note.xml",false);
+//connection.setRequestHeader("Content-Type","text/xml");
+connection.send();
+
+//alert(connection.responseText);
+//Place the request in an XML Document
+var thedocument = connection.responseXML;
+alert(thedocument);
+//Place the root node in an element
+var persons = thedocument.childNodes[0];
+//alert("i am her");
+//Retrieve each customer in turn
+document.write("<table>");
+
+for (var i = 0; i < persons.children.length; i++) {
+var person = persons.children[i];
+var to = person.getElementsByTagName["to"];
+var from = person.getElementsByTagName["from"];
+var heading = person.getElementsByTagName["heading"];
+var body = person.getElementsByTagName["body"];
+document.write("<tr><td>");
+document.write(to);
+document.write("</td><td>");
+document.write(from);
+document.write("</td><td>");
+document.write(heading);
+document.write("</td><td>");
+document.write(body);
+document.write("</td></tr>");
+
+}
+
+document.write("</table>");
+}
+
+$(function clicked(){
+document.getElementById("to").innerHTML = "wewe vipi";
+});
+
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  var xmlfile = "note.xml";
+
+xmlhttp.open("GET",xmlfile,false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+document.getElementById("to").innerHTML= xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+document.getElementById("from").innerHTML=  xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+document.getElementById("message").innerHTML= xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+*/
+
+</script>
+
+
+</body>
+</html>

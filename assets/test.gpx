@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="Dakota 10" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+<metadata>
+	<link href="http://www.garmin.com"><text>Garmin International</text></link>
+	<time>2013-06-02T08:55:05Z</time>
+</metadata>
+	<trk>
+		<name>02-JUN-13 11:55:02 AM</name>
+		<trkseg>
+		<trkpt lat="-6.75337" lon="39.23945">
+			<ele>1440.67</ele>
+			<time>2013-06-02T08:20:37Z</time>
+		</trkpt>
+		<trkpt lat="-6.76906" lon="39.22778">
+			<ele>1444.52</ele>
+			<time>2013-06-02T08:20:49Z</time>
+		</trkpt>
+		<trkpt lat="-6.77997" lon="39.21610">
+			<ele>1447.40</ele>
+			<time>2013-06-02T08:21:00Z</time>
+		</trkpt>
+		<trkpt lat="-6.78815" lon="39.20924">
+			<ele>1451.25</ele>
+			<time>2013-06-02T08:21:11Z</time>
+		</trkpt>
+		<trkpt lat="-6.78815" lon="39.20924">
+			<ele>1454.13</ele>
+			<time>2013-06-02T08:21:22Z</time>
+		</trkpt>
+		<trkpt lat="-6.80792" lon="39.28683">
+			<ele>1457.98</ele>
+			<time>2013-06-02T08:21:34Z</time>
+		</trkpt>
+		<trkpt lat="-6.80792" lon="39.28683">
+			<ele>1457.98</ele>
+			<time>2013-06-02T08:21:34Z</time>
+		</trkpt>
+		<trkpt lat="-6.78542" lon="39.27721">
+			<ele>1457.98</ele>
+			<time>2013-06-02T08:21:34Z</time>
+		</trkpt>
+		<trkpt lat="-6.77724" lon="39.26485">
+			<ele>1457.98</ele>
+			<time>2013-06-02T08:21:34Z</time>
+		</trkpt>
+		<trkpt lat="-6.75747" lon="39.25112">
+			<ele>1457.98</ele>
+			<time>2013-06-02T08:21:34Z</time>
+		</trkpt>
+	</trkseg>
+	</trk>
+</gpx>

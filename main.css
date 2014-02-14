@@ -1,0 +1,9 @@
+body{
+	background-color: red;
+}
+.menu
+{
+	color: yellow;
+	text-decoration: underline;
+	list-style: none;
+}
